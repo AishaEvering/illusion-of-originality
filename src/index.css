@@ -1,0 +1,286 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  cursor: none; /* Hide default cursor */
+}
+
+body {
+  @apply bg-night text-ink font-body;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  cursor: none; /* Hide default cursor */
+  position: relative;
+}
+
+/* Hide default cursor on interactive elements */
+a,
+button,
+input,
+textarea,
+select {
+  cursor: none;
+}
+
+/* Section styling */
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Responsive text sizing */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2.5rem !important;
+  }
+
+  h2 {
+    font-size: 2rem !important;
+  }
+
+  p {
+    font-size: 1rem !important;
+  }
+
+  .panel-title {
+    font-size: 2rem !important;
+  }
+
+  .panel-desc {
+    font-size: 1rem !important;
+  }
+}
+
+h1, h2, h3 {
+  @apply font-display tracking-tight;
+}
+
+@keyframes glitch-strong {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0);
+    text-shadow: none;
+  }
+  10% {
+    opacity: 1;
+    transform: translate(-2px, 0);
+    text-shadow: 2px 0 red, -2px 0 cyan;
+  }
+  20% {
+    transform: translate(2px, -1px);
+    text-shadow: -2px 0 red, 2px 0 cyan;
+  }
+  30% {
+    transform: translate(-1px, 1px) skew(-2deg);
+    text-shadow: 2px 0 red, -2px 0 cyan;
+  }
+  40% {
+    transform: translate(1px, 0);
+    text-shadow: -2px 0 red, 2px 0 cyan;
+  }
+  50% {
+    transform: translate(0, 0);
+    text-shadow: none;
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+    text-shadow: none;
+  }
+}
+
+.glitch {
+  animation: glitch-strong 0.6s steps(2, end);
+}
+
+.aurora {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.55;
+  mix-blend-mode: screen;
+  transition: opacity 0.4s ease;
+}
+
+.aurora-1 {
+  width: 600px;
+  height: 600px;
+  top: -10%;
+  left: -20%;
+  background: radial-gradient(circle, #6a4fff 0%, #b06bff 60%, transparent 70%);
+}
+
+.aurora-2 {
+  width: 500px;
+  height: 500px;
+  top: 30%;
+  right: -15%;
+  background: radial-gradient(circle, #ff6ad5 0%, #ffb86b 60%, transparent 75%);
+}
+
+.aurora-3 {
+  width: 700px;
+  height: 700px;
+  bottom: -20%;
+  left: 25%;
+  background: radial-gradient(circle, #4fd5ff 0%, #8a7bff 60%, transparent 70%);
+}
+
+.aurora-4 {
+  width: 450px;
+  height: 450px;
+  bottom: 10%;
+  right: 10%;
+  background: radial-gradient(circle, #ff8e6e 0%, #ffd86b 60%, transparent 80%);
+}
+
+@keyframes glow-pulse {
+  0% {
+    opacity: 0.6;
+    filter: drop-shadow(0 0 2px rgba(255, 184, 120, 0.5));
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 6px rgba(255, 184, 120, 0.9));
+  }
+  100% {
+    opacity: 0.6;
+    filter: drop-shadow(0 0 2px rgba(255, 184, 120, 0.5));
+  }
+}
+
+@keyframes textGlowShift {
+  0% {
+    background-position: 0% 50%;
+    opacity: 0.85;
+  }
+  50% {
+    background-position: 100% 50%;
+    opacity: 1;
+  }
+  100% {
+    background-position: 0% 50%;
+    opacity: 0.85;
+  }
+}
+
+/* glowing dot */
+.animate-glow {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+/* animated gradient text */
+.animate-glow-text {
+  background-size: 200% 200%;
+  animation: textGlowShift 6s ease-in-out infinite;
+}
+
+.writing-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+
+/* Subtle data-grid style background for the pipeline section */
+.pipeline-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(
+      rgba(148, 163, 184, 0.12) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(148, 163, 184, 0.12) 1px,
+      transparent 1px
+    );
+  background-size: 40px 40px, 40px 40px;
+  background-position: 0 0, 0 0;
+}
+
+/* “Data bars” sliding softly across the background */
+.pipeline-bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 90px;
+  background: linear-gradient(
+    90deg,
+    rgba(59, 130, 246, 0) 0%,
+    rgba(147, 51, 234, 0.18) 30%,
+    rgba(249, 115, 22, 0.18) 70%,
+    rgba(59, 130, 246, 0) 100%
+  );
+  filter: blur(8px);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.pipeline-bar-1 {
+  top: 20%;
+  animation: pipeline-slide 16s linear infinite;
+}
+
+.pipeline-bar-2 {
+  bottom: 18%;
+  animation: pipeline-slide 22s linear infinite reverse;
+}
+
+@keyframes pipeline-slide {
+  0% {
+    transform: translateX(-20%);
+  }
+  100% {
+    transform: translateX(20%);
+  }
+}
+
+/* ✨ Timeline floating dust */
+
+.dust-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.dust-particle {
+  position: absolute;
+  bottom: -40px;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(255, 255, 255, 0.0) 70%
+  );
+  filter: blur(3px);
+  animation-name: floatUpDust;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+/* soft, slow rise with fade in/out */
+@keyframes floatUpDust {
+  0% {
+    transform: translateY(0) scale(0.7);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-140vh) scale(1.15);
+    opacity: 0;
+  }
+}
