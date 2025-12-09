@@ -72,7 +72,11 @@ function Timeline() {
   return (
     <section
       id="timeline"
-      className="relative py-28 md:py-32 overflow-hidden"
+      className="relative py-28 md:py-32 overflow-hidden w-screen max-w-none"
+      style={{
+        marginLeft: "calc(50% - 50vw)",
+        marginRight: "calc(50% - 50vw)",
+      }}
     >
       {/* Background image + gradient wash */}
       <div className="pointer-events-none absolute inset-0 -z-10">
