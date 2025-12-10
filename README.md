@@ -1,5 +1,6 @@
 ![Illusion of Originality Screenshot](./assets/header.png)
 
+
 # Illusion of Originality  
 *A Case Study in Generative AI, Data Ethics, and Hidden Labor*
 
