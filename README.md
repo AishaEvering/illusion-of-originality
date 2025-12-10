@@ -1,4 +1,4 @@
-![Illusion of Originality Demo](./assets/header.gif)
+![Illusion of Originality Demo](./src/assets/header.gif)
 
 # Illusion of Originality  
 *A Case Study in Generative AI, Data Ethics, and Hidden Labor*
