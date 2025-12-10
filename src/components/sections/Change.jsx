@@ -35,15 +35,6 @@ function Change() {
         marginRight: "calc(50% - 50vw)",
       }}
     >
-      {/* Background video */}
-      <video
-        className="pointer-events-none absolute inset-0 -z-20 h-full w-full object-cover"
-        src="/media/change_section_bg_hope.mp4"
-        autoPlay
-        muted
-        loop
-        playsInline
-      />
 
       {/* Background gradient + soft glows */}
       <div className="pointer-events-none absolute inset-0 -z-10">

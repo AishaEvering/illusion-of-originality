@@ -6,7 +6,6 @@ export const ACTORS = {
     label: "AI Corporations",
     shortLabel: "Corporations",
     description: "AI labs, model builders & dataset scrapers.",
-    // update these to your actual files
     iconSrc: "/images/actors/corporations.png",
     accentClass: "from-grad-blue to-grad-purple",
   },

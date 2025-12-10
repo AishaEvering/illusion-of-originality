@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaGlobeAmericas } from "react-icons/fa";
 
-// TODO: update these with your real links
+
 const LINKS = {
   github: "https://github.com/AishaEvering",
   linkedin: "https://www.linkedin.com/in/aisha-evering-91580a3/",
