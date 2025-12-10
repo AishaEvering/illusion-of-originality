@@ -11,9 +11,11 @@ import Timeline from "./components/sections/Timeline";
 import Actors from "./components/sections/Actors";
 import Rules from "./components/sections/Rules";
 import Impacts from "./components/sections/Impacts";
-import ChangeSection from "./components/sections/ChangeSection";
+import Change from "./components/sections/Change";
 import Sources from "./components/sections/Sources";
-import ProgressBar from "./components/ProgressBar"
+import Dedication from "./components/sections/Dedication";
+import Footer from "./components/sections/Footer";
+
 
 function App() {
 
@@ -43,9 +45,10 @@ function App() {
         <Actors />
         <Rules />
         <Impacts />
-        <ChangeSection />
+        <Change />
         <Sources />
-        {/* <ProgressBar /> */}
+        <Dedication />
+        <Footer />
       </main>
     </div>
   );

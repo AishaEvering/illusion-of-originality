@@ -189,7 +189,7 @@ function RulesSection() {
               className="border-b border-neutral-300 pb-6 mb-8"
             >
               <p className="text-[11px] tracking-[0.3em] uppercase text-neutral-500 mb-2">
-                Step 4 · Legal & Institutional Rules
+                Step 5 · Legal & Institutional Rules
               </p>
               <h2 className="text-2xl md:text-3xl font-display text-black mb-3">
                 Institutional Policies Governing Data Scraping for AI Training
