@@ -215,7 +215,7 @@ function Sources() {
         </SourceGroup>
 
         {/* ---------------------------------------------- */}
-        {/*  CREATOR PERSPECTIVES                           */}
+        {/*  CREATOR PERSPECTIVES                          */}
         {/* ---------------------------------------------- */}
         <SourceGroup title="Creator perspectives & public statements">
           <SourceItem>
