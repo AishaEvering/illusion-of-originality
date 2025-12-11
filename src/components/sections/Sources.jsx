@@ -56,7 +56,7 @@ function Sources() {
         >
           This project draws on legal filings, model documentation, policy
           guidance, scholarly work, investigative journalism, and public
-          statements from creators — along with inline citations used in earlier
+          statements from creators, along with inline citations used in earlier
           sections of this website.
         </motion.p>
 
