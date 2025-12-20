@@ -52,7 +52,7 @@ Styled with **TailwindCSS** and custom layouts for mobile, tablet, and desktop.
 - **Framer Motion**
 - **GSAP**  
 - **React Icons**  
-- **Vite or Next.js** (depending on build configuration)
+- **Next.js**
 
 ---
 
